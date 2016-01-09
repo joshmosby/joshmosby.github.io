@@ -1,0 +1,127 @@
+div { 
+  animation: 
+             square-to-circle 2s cubic-bezier(0,.73,.77,1.02) 1s 1;
+             animation-fill-mode:forwards; 
+}
+
+div {
+  background: salmon;
+  border-radius: 0 0 0 0;
+  color: #222;
+  font-size: 24px;
+  font: Helvetica, Arial, Sans-serif;
+  height: 6em;
+  width: 6em;
+  position: absolute;
+  top: calc(50% - 9em);
+  left: calc(50% - 3em);
+}
+div.div2 {
+
+}
+
+
+@keyframes square-to-circle {
+  0%{
+    border-radius: 0 0 0 0;
+    background: coral;
+    transform:rotate(0deg);
+  }
+  25%{
+    border-radius: 50% 0 0 0;
+    background: darksalmon;
+    transform:rotate(45deg);
+  }
+  50%{
+    border-radius: 50% 50% 0 0;
+    background: indianred;
+    transform:rotate(90deg);
+  }
+  75%{
+    border-radius: 50% 50% 50% 0;
+    background: lightcoral;
+    transform:rotate(135deg);
+  }
+  100%{
+    border-radius: 50%;
+    background: darksalmon;
+    transform:rotate(180deg);
+    transform: translateX(-12em);
+  }
+}
+nav ul {
+  -webkit-font-smoothing:antialiased;
+  text-shadow:0 1px 0 #FFF;
+    background: #ddd;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+nav li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-width: 25%;
+}
+nav a {
+    background: #ddd;
+    color: #444;
+    display: block;
+    font: bold 16px/50px sans-serif;
+    padding: 0 25px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+
+}
+nav .dropdown:hover:after{
+  content:'\25bc'
+}
+nav li:hover a {
+    background: #ccc;
+}
+nav li ul {
+    float: left;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    visibility: hidden;
+    z-index: 1;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+nav li:hover ul {
+    opacity: 1;
+    top: 50px;
+    visibility: visible;
+}
+nav li ul li {
+    float: none;
+    width: 100%;
+}
+nav li ul a:hover {
+    background: #bbb;
+}
+
+/* Clearfix */
+
+.cf:after, .cf:before {
+    content:"";
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+
+
